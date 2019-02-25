@@ -19,7 +19,7 @@
 
 ## 安裝vue-cli套件
 >npm install –g vue/cli  
->npm install -g vue/cli-init
+>npm install -g vue/cli-init  
 >npm install -g vue-router  
 
 **如果出現ERROR**  
