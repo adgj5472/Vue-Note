@@ -25,9 +25,6 @@
 >npm install -g @vue/cli
 >npm install -g @vue/cli-init  
 
-**如果出現ERROR**  
-
-
 ### 檢查Vue版本  
 >vue -V  
 
