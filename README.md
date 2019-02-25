@@ -31,6 +31,13 @@
 ## 建立專案(拉取模板)
 >vue init webpack my-project  
 
+**tip**  
+官方模板  
+webpack(常用)  
+simple  
+pwa  
+browserify  
+
 **切換目錄**  
 >cd my-project  
 
