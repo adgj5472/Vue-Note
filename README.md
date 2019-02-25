@@ -4,7 +4,7 @@
 **Vue教學文件**
 * [Vue.js](https://cn.vuejs.org/v2/guide/installation.html)  
 * [Vue-cli](https://cli.vuejs.org/zh/guide/)  
-* [Vue-router](https://router.vuejs.org/zh/installation.html)
+* [Vue-router](https://router.vuejs.org/zh/installation.html)  
 
 
 ## 安裝 Node.js
@@ -19,7 +19,7 @@
 ## 安裝vue-cli套件
 >npm install –g vue/cli  
 >npm install -g vue/cli-init
->npm install -g vue-router
+>npm install -g vue-router  
 
 **如果出現ERROR**  
 >npm config set registry http://registry.npmjs.org/  
