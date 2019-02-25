@@ -13,6 +13,7 @@
 #### Ubuntu  
 >sudo apt-get update  
 >sudo apt-get install nodejs  
+>sudo apt install npm  
 ### 檢查是否安裝完成
 >node -v
 
