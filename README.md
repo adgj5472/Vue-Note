@@ -29,9 +29,11 @@
 
 ## 建立專案(拉取模板)
 >vue init webpack my-project  
-## 執行
+**切換目錄**
 >cd my-project  
+**安裝 package**
 >npm install  
+**執行**
 >npm run dev  
 
 
