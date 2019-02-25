@@ -17,13 +17,16 @@
 ### 檢查是否安裝完成
 >node -v
 
-## 安裝vue-cli套件
->npm install –g vue/cli  
->npm install -g vue/cli-init  
->npm install -g vue-router  
+## 安裝vue  
+>npm config set registry http://registry.npmjs.org/  
+>npm install vue  
+
+## 安裝vue-cli套件  
+>npm install -g @vue/cli
+>npm install -g @vue/cli-init  
 
 **如果出現ERROR**  
->npm config set registry http://registry.npmjs.org/  
+
 
 ### 檢查Vue版本  
 >vue -V  
