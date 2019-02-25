@@ -22,7 +22,7 @@
 >npm install vue  
 
 ## 安裝vue-cli套件  
->npm install -g @vue/cli
+>npm install -g @vue/cli  
 >npm install -g @vue/cli-init  
 
 ### 檢查Vue版本  
