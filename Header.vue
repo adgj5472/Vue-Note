@@ -10,8 +10,13 @@
       <li>
         <a href="#contact">Contact</a>
       </li>
-      <li class="right">
+      <li class="right dropdown">
         <a href="#about">About</a>
+          <div class="dropdown-content">
+           <a href="#">Link 1</a>
+           <a href="#">Link 2</a>
+           <a href="#">Link 3</a>
+          </div>
       </li>
     </ul>
 
@@ -73,4 +78,31 @@ ul.topnav li.right {
     float: none;
   }
 }
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #5c5c5c;
+  box-shadow: 0px 8px 16px 0px rgba(226, 198, 219, 0.2);
+  min-width: auto;
+  font-size: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
