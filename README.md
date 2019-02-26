@@ -14,8 +14,8 @@
 
 ### 安裝
 ```Bash
-npm i vue bootstrap-vue bootstrap
-npm i -S vue2-datatable-component
+$ npm i vue bootstrap-vue bootstrap
+$ npm i -S vue2-datatable-component
 ```
 ### main.js引入
 ``` js
@@ -40,26 +40,33 @@ vue 語法高亮顯示
 #### Windows  
 下載地址: https://nodejs.org/en/  
 #### Ubuntu  
->sudo apt-get update  
->sudo apt-get install nodejs  
->sudo apt install npm  
+```Bash
+$ sudo apt-get update  
+$ sudo apt-get install nodejs  
+$ sudo apt install npm  
+```
 ### 檢查是否安裝完成
->node -v
-
+```Bash
+$ node -v
+```
 ## 安裝vue  
->npm config set registry http://registry.npmjs.org/  
->npm install vue  
-
+```Bash
+$ npm config set registry http://registry.npmjs.org/  
+$ npm install vue  
+```
 ## 安裝vue-cli套件  
->npm install -g @vue/cli  
->npm install -g @vue/cli-init  
-
+```Bash
+$ npm install -g @vue/cli  
+$ npm install -g @vue/cli-init  
+```
 ### 檢查Vue版本  
->vue -V  
-
+```Bash
+$ vue -V  
+```
 ## 建立專案(拉取模板)
->vue init webpack my-project  
-
+```Bash
+$ vue init webpack my-project  
+```
 **tip**  
 官方模板  
 webpack(常用)  
@@ -68,12 +75,15 @@ pwa
 browserify  
 
 **切換目錄**  
->cd my-project  
-
+```Bash
+$ cd my-project  
+```
 **安裝 package**  
->npm install  
-
+```Bash
+$ npm install  
+```
 **執行**  
->npm run dev  
-
+```Bash
+$ npm run dev  
+```
 
