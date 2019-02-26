@@ -6,6 +6,27 @@
 * [Vue-cli](https://cli.vuejs.org/zh/guide/)  
 * [Vue-router](https://router.vuejs.org/zh/installation.html)  
 * [w3schools CSS](https://www.w3schools.com/css/css_navbar.asp)  
+
+## 使用套件(bootstrap-vue datatable...)
+如果所有UI皆自己編寫則不用引入
+* [Bootstrap-vue](https://bootstrap-vue.js.org/)  
+* [Datatables](https://onewaytech.github.io/vue2-datatable/doc/#/zh-cn/README)  
+
+### 安裝
+```Bash
+npm i vue bootstrap-vue bootstrap
+npm i -S vue2-datatable-component
+```
+### main.js引入
+``` js
+import Datatable from 'vue2-datatable-component'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+Vue.use(Datatable)
+Vue.use(BootstrapVue)
+```
+
 ## Vs Code開發推薦套件
 * vscode-icons  
 檔案icon  
