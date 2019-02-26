@@ -19,7 +19,7 @@
 
 <script>
 export default {
-    
+
 }
 </script>
 
@@ -42,7 +42,7 @@ ul.sidenav li a {
   padding: 8px 16px;
   text-decoration: none;
 }
- 
+
 ul.sidenav li a.active {
   background-color: #4CAF50;
   color: white;
