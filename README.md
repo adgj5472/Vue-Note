@@ -6,6 +6,14 @@
 * [Vue-cli](https://cli.vuejs.org/zh/guide/)  
 * [Vue-router](https://router.vuejs.org/zh/installation.html)  
 
+## Vs Code開發推薦套件
+* vscode-icons  
+檔案icon  
+File -> Preferences -> File Icon Theme -> 選擇VSCode Icon  
+* Vetur  
+格式化.vue檔案格式  
+* Vue 2 Sinppets  
+vue 語法高亮顯示  
 
 ## 安裝 Node.js
 #### Windows  
