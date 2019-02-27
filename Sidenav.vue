@@ -1,29 +1,43 @@
 <template>
   <div>
-    <ul class="sidenav">
-      <li>
-        <a class="active" href="#home">Home</a>
-      </li>
-      <li>
-        <a href="#news">News</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-      <li>
-        <a href="#about">About</a>
-      </li>
-    </ul>
+    <button v-on:click="hide" >a</button>
+    <div id="main">
+      <ul class="sidenav">
+        <li>
+          <a class="active" href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#news">News</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    hide () {
+      let main = document.getElementById('main')
+      // main.style.width = '4000px'
+      main.classList.toggle('enlarged')
+    }
 
+  }
 }
+
 </script>
 
 <style>
+div.enlarged {
+  display: none;
+}
 ul.sidenav {
   list-style-type: none;
   margin: 0;
@@ -61,4 +75,5 @@ ul.sidenav li a:hover:not(.active) {
     display: none;
   }
 }
+
 </style>
