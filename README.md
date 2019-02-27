@@ -7,7 +7,7 @@
 * [Vue-router](https://router.vuejs.org/zh/installation.html)  
 * [w3schools CSS](https://www.w3schools.com/css/css_navbar.asp)  
 
-## 使用套件(bootstrap-vue datatable...)
+## 使用別人做好的組件(bootstrap-vue datatable...)
 如果所有UI皆自己編寫則不用引入
 * [Bootstrap-vue](https://bootstrap-vue.js.org/)  
 * [Datatables](https://onewaytech.github.io/vue2-datatable/doc/#/zh-cn/README)  
