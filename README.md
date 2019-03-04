@@ -91,6 +91,79 @@ $ npm install
 ```Bash
 $ npm run dev  
 ```
+## Vue 指令
+### v-for
+- 2.2.0+ 版本中，在組件使用 v-for 時，必須添加key值  
+- 不推薦將index當作key值  
+例子:
+``` vue
+const list = [
+    {
+        id: 1,
+        name: 'test1',
+    },
+    {
+        id: 2,
+        name: 'test2',
+    },
+    {
+        id: 3,
+        name: 'test3',
+    },
+]
+<div v-for="(item, index) in list" :key="index" >{{item.name}}</div>
+```
+**1.在最後一筆資料後再加一筆資料**  
+``` vue
+const list = [
+    {
+        id: 1,
+        name: 'test1',
+    },
+    {
+        id: 2,
+        name: 'test2',
+    },
+    {
+        id: 3,
+        name: 'test3',
+    },
+    {
+        id: 4,
+        name: 'new data',
+    },
+]
+```
+這個例子直接渲染最後一筆資料，使用 index 作為 key 沒有問題  
+**2.在中間插入一筆資料**  
+``` vue
+const list = [
+    {
+        id: 1,
+        name: 'test1',
+    },
+    {
+        id: 4,
+        name: 'new data',
+    }
+    {
+        id: 2,
+        name: 'test2',
+    },
+    {
+        id: 3,
+        name: 'test3',
+    },
+]
+```
+更新渲染的資料
+``` vue
+key: 0  index: 0 name: test1     key: 0  index: 0 name: test1
+key: 1  index: 1 name: test2     key: 1  index: 1 name: new data
+key: 2  index: 2 name: test3     key: 2  index: 2 name: test2
+                                 key: 3  index: 3 name: test3
+```
+發現除了第一筆資料不用重新渲染，其他三筆皆須重新渲染
 
 ## Vue-Router
 
