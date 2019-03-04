@@ -203,11 +203,9 @@ next(error): (2.4.0+) 如果傳入 next 的参数是一個 Error 實例，則nav
 確保要調用 next 方法，否則 hook 就不會被 resolved。
 
 ## Build
-``` Bash
-npm run build
-```
-**** 自定義Build**
+***自定義Build**
 ``` js
+// config/index.js
 module.exports = {
     dev: {...},
     build: {
@@ -242,4 +240,8 @@ module.exports = {
         bundleAnalyzerReport: process.env.npm_config_report
     }
 }
+```
+### 執行Build
+``` Bash
+npm run build
 ```
