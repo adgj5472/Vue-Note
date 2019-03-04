@@ -201,3 +201,45 @@ next('/') 或者 next({ path: '/' }): 跳轉到一個不同的位址。現在的
 next(error): (2.4.0+) 如果傳入 next 的参数是一個 Error 實例，則navigation會被終止且該错誤會被傳遞给 router.onError() 註冊過的callback。
 
 確保要調用 next 方法，否則 hook 就不會被 resolved。
+
+## Build
+``` Bash
+npm run build
+```
+**** 自定義Build**
+``` js
+module.exports = {
+    dev: {...},
+    build: {
+        // index.html 模板位置
+        index: path.resolve(__dirname, '../dist/index.html'),
+        
+        // dist檔案位置(dist可改名稱)
+        assetsRoot: path.resolve(__dirname, '../dist'),
+        assetsSubDirectory: 'static',
+        assetsPublicPath: '/',
+
+        /**
+         * Source Maps
+         */
+        // 正式佈署將 productionSourceMap 改成false
+        // 將不會產生 source map，可加速建構且瀏覽器無法查看原始程式碼
+        productionSourceMap: true,
+        // https://webpack.js.org/configuration/devtool/#production
+        devtool: '#source-map',
+
+        // Gzip off by default as many popular static hosts such as
+        // Surge or Netlify already gzip all static assets for you.
+        // Before setting to `true`, make sure to:
+        // npm install --save-dev compression-webpack-plugin
+        productionGzip: false,
+        productionGzipExtensions: ['js', 'css'],
+
+        // Run the build command with an extra argument to
+        // View the bundle analyzer report after build finishes:
+        // `npm run build --report`
+        // Set to `true` or `false` to always turn it on or off
+        bundleAnalyzerReport: process.env.npm_config_report
+    }
+}
+```
