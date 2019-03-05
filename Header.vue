@@ -1,22 +1,35 @@
 <template>
   <div>
-    <ul class="topnav">
+    <ul class="headertop">
       <li>
-        <a class="active" href="#home">Home</a>
+        <router-link id="web-logo" :to="'Home'">
+          <img alt="Logo" width="25px" height="25px" :src="HeaderData.info.LogoImg">
+          <span></span>
+        </router-link>
       </li>
+      <template v-for="menu in HeaderData.menu">
+          <li v-if="menu.dropdown" class="dropdown" :key="menu.id">
+            <a href="javascript:void(0)">{{menu.name}}</a>
+              <ul class="dropdown-content">
+                <li v-for="subMenu in menu.subMenu" :key="subMenu.id">
+                  <router-link v-if="subMenu.display" :to="'subMenu.url'">{{subMenu.name}}</router-link>
+                </li>
+              </ul>
+          </li>
+          <li v-else class="dropdown" :key="menu.id">
+            <router-link :to="'menu.url'">{{menu.name}}</router-link>
+          </li>
+      </template>
       <li>
-        <a href="#news">News</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
+        <button class="navbar-toggler collapsed" @click="hide" ><span><i class="navbar-toggler-icon"></i></span></button>
       </li>
       <li class="right dropdown">
-        <a href="#about">About</a>
-          <div class="dropdown-content">
-           <a href="#">Link 1</a>
-           <a href="#">Link 2</a>
-           <a href="#">Link 3</a>
-          </div>
+        <a href="javascript:void(0)">Dropdown</a>
+          <ul class="dropdown-content">
+           <li><router-link :to="'Home'">Home</router-link></li>
+           <li><router-link :to="'About'">About</router-link></li>
+           <li><router-link :to="'Home'">Link</router-link></li>
+          </ul>
       </li>
     </ul>
   </div>
@@ -25,15 +38,27 @@
 <script>
 export default {
   data () {
-    return {}
+    return {
+    }
   },
-  methods: {}
+  props: {
+    HeaderData: {
+      type: Object,
+      required: true
+    }
+  },
+  methods: {
+    hide () {
+      let main = document.getElementById('Sidebar')
+      main.classList.toggle('enlarged')
+    }
+  }
 }
 </script>
 
 <style>
 
-ul.topnav {
+ul.headertop {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -41,11 +66,11 @@ ul.topnav {
   background-color: #333;
 }
 
-ul.topnav li {
+ul.headertop li {
   float: left;
 }
 
-ul.topnav li a {
+ul.headertop li a {
   display: block;
   color: white;
   text-align: center;
@@ -53,47 +78,39 @@ ul.topnav li a {
   text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {
+ul.headertop li a:hover:not(.active) {
   background-color: #111;
 }
 
-ul.topnav li a.active {
+ul.headertop li a.active {
   background-color: #4caf50;
 }
 
-ul.topnav li.right {
+ul.headertop li.right {
   float: right;
 }
 
 @media screen and (max-width: 600px) {
-  ul.topnav li.right,
-  ul.topnav li {
+  ul.headertop li.right,
+  ul.headertop li {
     float: none;
   }
+  ul.headertop li button{
+    display: none;
+  }
 }
-
-.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
+ul.dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #5c5c5c;
-  box-shadow: 0px 8px 16px 0px rgba(226, 198, 219, 0.2);
-  min-width: auto;
-  font-size: auto;
+  padding-left: 0;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+li.dropdown:hover ul{
+  background: #333;
   display: block;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+ul.dropdown-content li {
+  clear: both;
+  width: 100%;
 }
-
 </style>
