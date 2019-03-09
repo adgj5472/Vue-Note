@@ -7,7 +7,6 @@
   </table>
   <form name="form1" id="form1" width="80%">
   <table width="60%" align="center" bgcolor="#aaaaaa">
-      <input type="text" size="40" maxlength="46" :value="LotteryData.info.title">
       <div style="margin-bottom:5px">禮物欄</div>
       <table class="table table-striped table-dark">
         <thead>
@@ -25,7 +24,7 @@
       </table>
     <tr height="30">
       <td>
-        <div>抽獎主題：</div>
+        <div>抽獎主題： <input type="text" size="40" maxlength="46" :value="LotteryData.info.title"></div>
       </td>
       <td><div>抽獎人數：<input type="text" v-model="numOfuser" readonly></div></td>
       <td><div>中獎人數：<input type="text" v-model="numOfprize" readonly></div></td>
