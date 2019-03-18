@@ -1,4 +1,17 @@
 # Vue-Note
+**簡介**  
+Vue.js是一個用於建立使用者介面的開源JavaScript框架，也是一個建立單頁面應用的Web應用框架。  
+Vue所關注的核心是MVC模式中的視圖層，同時，它也能方便地取得資料更新，並通過元件內部特定的方法實現視圖與模型的互動。  
+**單檔案元件**  
+為了更好地適應複雜的專案，Vue支援以.vue為副檔名的檔案來定義一個完整元件，用以替代使用Vue.component註冊元件的方式。開發者可以使用 Webpack或Browserify等構建工具來打包單檔案元件。  
+**回應式設計**  
+回應式是指MVC模型中的視圖隨著模型變化而變化。在Vue中，開發者只需將視圖與對應的模型進行繫結，Vue便能自動觀測模型的變動，並重繪視圖。這一特性使得Vue的狀態管理變得相當簡單直觀。  
+**過渡效果**
+* Vue在插入、更新或者移除DOM時，提供多種不同方式的應用過渡效果。  
+* 在CSS過渡和動畫中自動應用class  
+* 可以配合使用第三方CSS動畫庫，如Animate.css  
+* 在過渡勾點函式中使用JavaScript直接操作DOM  
+* 可以配合使用第三方JavaScript動畫庫，如Velocity.js  
 
 ## 開始學習 Vue
 **Vue教學文件**
@@ -60,6 +73,15 @@ $ npm install -g @vue/cli
 $ npm install -g @vue/cli-init  
 ```
 ## 安裝Axios
+特色  
+* 官方推薦Ajax資料傳遞套件
+* 可以從流覽器發送XMLHttpRequests ( 簡單來說可以發送ajax )
+* 可以從Nodejs發送 Http 請求
+* 支援ES6 Promise
+* 可以攔截請求跟回應
+* 改變或轉換請求與回應的資料(這跟上面有相互呼應的感覺)
+* 自動轉換成Json格式
+* 可以預防XSRF攻擊
 ```Bash
 npm install axios
 ```
@@ -91,7 +113,7 @@ $ npm install
 ```Bash
 $ npm run dev  
 ```
-## Vue 指令
+## Vue 指令(目前遇到開發需注意的問題)
 ### v-for
 - 2.2.0+ 版本中，在組件使用 v-for 時，必須添加key值  
 - 不推薦將index當作key值  
@@ -245,3 +267,4 @@ module.exports = {
 ``` Bash
 npm run build
 ```
+再將後端與build後產生的dist目錄路徑相連
