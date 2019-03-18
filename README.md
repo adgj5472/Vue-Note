@@ -13,6 +13,40 @@ Vue所關注的核心是MVC模式中的視圖層，同時，它也能方便地�
 * 在過渡勾點函式中使用JavaScript直接操作DOM  
 * 可以配合使用第三方JavaScript動畫庫，如Velocity.js  
 
+## 目錄結構
+```
+.
+├── build
+    ├── build.js
+    ├── check-versions.js
+    ├── logo.png
+    ├── utils.js
+    ├── vue-loader.conf.js
+    ├── webpack.base.conf.js
+    ├── webpack.dev.conf.js
+    ├── webpack.prod.conf.js
+├── config
+    ├── dev.env.js
+    ├── index.js
+    ├── prod.env.js
+├── src
+    ├── assets
+    ├── components	
+        ├── Header
+        ├── Sidebar
+        ├── page
+        ├── layout.vue
+    ├── router	
+        ├── index.js
+    ├── App.vue
+    ├── main.js
+└── static
+    ├── __init__.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+```
+
 ## 開始學習 Vue
 **Vue教學文件**
 * [Vue.js](https://cn.vuejs.org/v2/guide/installation.html)  
