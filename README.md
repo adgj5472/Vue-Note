@@ -66,11 +66,12 @@
 ```
 
 ## 開始學習 Vue
-**Vue教學文件**
+**Vue教學及參考文件**
 * [Vue.js](https://cn.vuejs.org/v2/guide/installation.html)  
 * [Vue-cli](https://cli.vuejs.org/zh/guide/)  
 * [Vue-router](https://router.vuejs.org/zh/installation.html)  
 * [w3schools CSS](https://www.w3schools.com/css/css_navbar.asp)  
+* [Axios 封裝及API接口的管理](https://juejin.im/post/5b55c118f265da0f6f1aa354)  
 
 ## Option 使用別人做好的組件(bootstrap-vue datatable...)
 如果所有UI皆自己編寫則不用引入
