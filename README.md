@@ -322,11 +322,11 @@ npm run build
 ```
 再將後端與build後產生的dist目錄路徑相連
 
-### 疑難雜症
+# 疑難雜症
 ## 對父級組件做事件處理
 由$emit指定事件，並額外傳入參數給父組件的話，$emit會把第二個以後的全部參數都放到arguments這個物件中，若父組件要取得子組件透過$emit傳的參數，必須使用arguments來取值，arguments[0]代表第一個參數、arguments[1]代表第二個參數......。
 
-# 父組件
+### 父組件
 ``` vue
 <template>
 <div>
@@ -355,7 +355,7 @@ export default {
 </script>
 ```
 
-# 子組件 button-counter
+### 子組件 button-counter
 ``` vue
 <template>
 <div>
